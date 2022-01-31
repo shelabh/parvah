@@ -17,6 +17,6 @@ services:
     environment:
       DATABASE_URL: postgres://parvah:backend@postgres/parvah
     ports:
-      - 8443:8443
+      - 3001:3001
     depends_on:
       - postgres

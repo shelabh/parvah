@@ -11,11 +11,11 @@ services:
       - "5432:5432"
     volumes:
       - ./.docker/postgres:/var/lib/postgresql/_data
-  bunnytube-backend:
+  parvah-backend:
     build: ./
     restart: unless-stopped
     environment:
-      DATABASE_URL: postgres://bunnytube:backend@postgres/bunnytube
+      DATABASE_URL: postgres://parvah:backend@postgres/parvah
     ports:
       - 8443:8443
     depends_on:

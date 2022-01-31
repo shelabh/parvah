@@ -1,0 +1,12 @@
+{
+	"env": {
+	    "name": "Parvah",
+	    "branch": "main"
+	},
+	"containers": [
+	    {
+		"dir": "/",
+		"envVars": []
+	    }
+	]
+    }

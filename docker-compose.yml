@@ -4,9 +4,9 @@ services:
     image: postgres:13-alpine
     restart: unless-stopped
     environment:
-      POSTGRES_USER: bunnytube
+      POSTGRES_USER: parvah
       POSTGRES_PASSWORD: backend
-      POSTGRES_DB: bunnytube
+      POSTGRES_DB: parvah
     ports:
       - "5432:5432"
     volumes:

@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String    @id @default(uuid())
+  name        String
+  phoneNumber String    @unique
+  created     DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  Booking     Booking[]
+}
+
+model Booking {
+  id        String   @id @default(uuid())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  latitude  String
+  longitude String
+  location  String
+  created   DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

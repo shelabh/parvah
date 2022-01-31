@@ -25,7 +25,6 @@ model Booking {
   userId    String
   latitude  String
   longitude String
-  location  String
   created   DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
